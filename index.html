@@ -1,1 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malla Curricular Interactiva - Tecnología Médica</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
 
+    <header>
+        <h1>Malla Curricular - Tecnología Médica</h1>
+        <p>Haz clic en un ramo para marcarlo como aprobado. Los ramos se desbloquearán a medida que cumplas sus requisitos.</p>
+    </header>
+
+    <div class="malla-container">
+        <div class="semestre">
+            <h2>Semestre I</h2>
+            <div class="ramo" data-id="TM101" data-requisitos="">Laboratorio de Biología Celular</div>
+            <div class="ramo" data-id="TM102" data-requisitos="">Química General</div>
+            <div class="ramo" data-id="TM103" data-requisitos="">Introducción a la Tecnología Médica</div>
+            <div class="ramo" data-id="TM104" data-requisitos="">Elementos de Álgebra y Cálculo</div>
+        </div>
+
+        <div class="semestre">
+            <h2>Semestre II</h2>
+            <div class="ramo" data-id="TM201" data-requisitos="TM101">Histoembriología</div>
+            <div class="ramo" data-id="TM202" data-requisitos="TM104">Física General</div>
+            <div class="ramo" data-id="TM203" data-requisitos="TM102">Química Orgánica</div>
+            <div class="ramo" data-id="TM204" data-requisitos="">Inglés I</div>
+            <div class="ramo" data-id="TM205" data-requisitos="">Habilidades Comunicativas</div>
+        </div>
+
+        <div class="semestre">
+            <h2>Semestre III</h2>
+            <div class="ramo" data-id="TM301" data-requisitos="TM201">Fisiología Humana</div>
+            <div class="ramo" data-id="TM302" data-requisitos="TM103">Bioética</div>
+            <div class="ramo" data-id="TM303" data-requisitos="TM203">Bioquímica</div>
+            <div class="ramo" data-id="TM304" data-requisitos="TM101">Infectología</div>
+            <div class="ramo" data-id="TM305" data-requisitos="TM204">Inglés II</div>
+            <div class="ramo" data-id="TM306" data-requisitos="">Razonamiento Científico y TICS</div>
+        </div>
+
+        <div class="semestre">
+            <h2>Semestre IV</h2>
+            <div class="ramo" data-id="TM401" data-requisitos="TM301">Fisiopatología</div>
+            <div class="ramo" data-id="TM402" data-requisitos="TM301,TM303">Farmacología General</div>
+            <div class="ramo" data-id="TM403" data-requisitos="TM202">Protección Radiológica</div>
+            <div class="ramo" data-id="TM404" data-requisitos="TM202">Física Electromagnética</div>
+            <div class="ramo" data-id="TM405" data-requisitos="TM201">Radiodiagnóstico I</div>
+            <div class="ramo" data-id="TM406" data-requisitos="TM305">Inglés III</div>
+        </div>
+        
+        <div class="semestre">
+            <h2>Semestre V</h2>
+            <div class="ramo" data-id="TM501" data-requisitos="TM403">Procedimientos de Tecnología Médica Bioseguridad</div>
+            <div class="ramo" data-id="TM502" data-requisitos="TM304">Salud Pública I</div>
+            <div class="ramo" data-id="TM503" data-requisitos="TM405">Anatomía Imagenológica</div>
+            <div class="ramo" data-id="TM504" data-requisitos="TM404">Física Moderna</div>
+            <div class="ramo" data-id="TM505" data-requisitos="TM405">Radiodiagnóstico II</div>
+            <div class="ramo" data-id="TM506" data-requisitos="TM406">Inglés IV</div>
+        </div>
+
+        <div class="semestre">
+            <h2>Semestre VI</h2>
+            <div class="ramo" data-id="TM601" data-requisitos="TM502">Salud Pública II</div>
+            <div class="ramo" data-id="TM602" data-requisitos="TM503,TM401">Patología Imagenológica</div>
+            <div class="ramo" data-id="TM603" data-requisitos="TM505">Sistema Informático en Radiología</div>
+            <div class="ramo" data-id="TM604" data-requisitos="TM504">Física Nuclear</div>
+            <div class="ramo" data-id="TM605" data-requisitos="TM505,TM504">Tomografía Computada</div>
+        </div>
+
+        <div class="semestre">
+            <h2>Semestre VII</h2>
+            <div class="ramo" data-id="TM701" data-requisitos="TM601">Educación en Salud</div>
+            <div class="ramo" data-id="TM702" data-requisitos="TM601">Administración y Gestión en Salud</div>
+            <div class="ramo" data-id="TM703" data-requisitos="TM602">Intervencionismo Endovascular</div>
+            <div class="ramo" data-id="TM704" data-requisitos="TM602">Ultrasonido</div>
+            <div class="ramo" data-id="TM705" data-requisitos="TM604">Medicina Nuclear</div>
+            <div class="ramo" data-id="TM706" data-requisitos="TM605,TM602">Integrador I: Caso Clínico IFIME</div>
+        </div>
+
+        <div class="semestre">
+            <h2>Semestre VIII</h2>
+            <div class="ramo" data-id="TM801" data-requisitos="TM306">Metodología de la Investigación</div>
+            <div class="ramo" data-id="TM802" data-requisitos="TM702">Gestión y Aseguramiento de la Calidad</div>
+            <div class="ramo" data-id="TM803" data-requisitos="TM605,TM704">Resonancia Magnética</div>
+            <div class="ramo" data-id="TM804" data-requisitos="TM705">Radioterapia</div>
+            <div class="ramo" data-id="TM805" data-requisitos="TM306">Pensamiento Crítico</div>
+        </div>
+
+        <div class="semestre">
+            <h2>Semestre IX</h2>
+            <div class="ramo" data-id="TM901" data-requisitos="TM805">Responsibilidad Social</div>
+            <div class="ramo" data-id="TM902" data-requisitos="TM801,TM706">Seminario de Investigación IFIME</div>
+        </div>
+
+        <div class="semestre">
+            <h2>Semestre X</h2>
+            <div class="ramo" data-id="TM1001" data-requisitos="TM902">Integrador II: Internado Clínico IFIME</div>
+        </div>
+    </div>
+
+    <footer>
+        <button id="resetButton">Limpiar Malla</button>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
