@@ -1,1 +1,131 @@
+/* Estilos Generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fce4ec; /* Rosado pastel muy claro de fondo */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
 
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #c2185b; /* Rosado más oscuro para títulos */
+}
+
+h1 {
+    font-weight: 600;
+}
+
+/* Contenedor principal de la malla */
+.malla-container {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto; /* Permite scroll horizontal en pantallas pequeñas */
+    padding-bottom: 20px;
+    gap: 15px;
+}
+
+/* Columnas de Semestres */
+.semestre {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    min-width: 220px; /* Ancho mínimo de cada columna */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-top: 5px solid #f48fb1; /* Borde superior rosado pastel */
+}
+
+.semestre h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #ad1457; /* Rosado oscuro */
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+/* Tarjetas de Ramos */
+.ramo {
+    background-color: #fce4ec; /* Rosado pastel */
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #f8bbd0;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9em;
+    font-weight: 400;
+    user-select: none; /* Evita que el texto se seleccione al hacer clic */
+}
+
+.ramo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(194, 24, 91, 0.15);
+    border-color: #c2185b;
+}
+
+/* Estado Aprobado */
+.ramo.aprobado {
+    background-color: #c8e6c9; /* Verde pastel */
+    color: #2e7d32;
+    border-color: #a5d6a7;
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+/* Estado Bloqueado */
+.ramo.bloqueado {
+    background-color: #f5f5f5; /* Gris claro */
+    color: #9e9e9e;
+    border-color: #e0e0e0;
+    cursor: not-allowed;
+}
+
+.ramo.bloqueado:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+/* Botón para limpiar */
+footer {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#resetButton {
+    background-color: #c2185b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+#resetButton:hover {
+    background-color: #ad1457;
+}
+
+/* Diseño Responsivo para celulares */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .malla-container {
+        /* Se mantiene el scroll horizontal, es la mejor UX para mallas */
+    }
+
+    .semestre {
+        min-width: 200px; /* Columnas un poco más angostas */
+        padding: 15px;
+    }
+}
